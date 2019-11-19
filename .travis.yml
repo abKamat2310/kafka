@@ -36,7 +36,7 @@ jdk:
   - oraclejdk8
 
 before_install:
-  - gradle wrapper
+  - ./gradlew wrapper
 
 script:
   - ./gradlew rat
@@ -46,10 +46,10 @@ services:
   - docker
 
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+  - rm -f  $HOME/.gradlew/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradlew/caches/*/plugin-resolution/
 cache:
   directories:
     - "$HOME/.m2/repository"
-    - "$HOME/.gradle/caches/"
-    - "$HOME/.gradle/wrapper/"
+    - "$HOME/.gradlew/caches/"
+    - "$HOME/.gradlew/wrapper/"
