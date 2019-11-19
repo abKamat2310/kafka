@@ -13,9 +13,7 @@
 sudo: required
 dist: trusty
 language: java
-os:
 
-  - linux-ppc64le
 
 env:
   - _DUCKTAPE_OPTIONS="--subset 0  --subsets 15"
