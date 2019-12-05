@@ -40,7 +40,7 @@ before_install:
 
 script:
   - ./gradlew rat
-  - ./gradlew systemTestLibs && /bin/bash ./tests/docker/run_tests.sh
+  - ./gradlew jar && ./gradlew unitTest
 
 services:
   - docker
